@@ -77,6 +77,7 @@ void pop_stack(stack_t **, unsigned int);
 void nop_stack(stack_t **, unsigned int);
 void swap_stack(stack_t **, unsigned int);
 void add_elements(stack_t **, unsigned int);
+void sub_stack(stack_t **, unsigned int);
 
 void free_stk(stack_t **);
 
