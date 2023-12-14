@@ -28,6 +28,7 @@ instruction_t opes[] = {
 {"sub", sub_stack},
 {"div", div_stack},
 {"mul", multi_stack},
+{"mod", mod_stack},
 {NULL, NULL}
 };
 for (; opes[idx].opcode != NULL; ++idx)

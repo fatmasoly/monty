@@ -80,6 +80,8 @@ void add_elements(stack_t **, unsigned int);
 void sub_stack(stack_t **, unsigned int);
 void div_stack(stack_t **, unsigned int);
 void multi_stack(stack_t **, unsigned int);
+void mod_stack(stack_t **, unsigned int);
+
 void free_stk(stack_t **);
 
 #endif
