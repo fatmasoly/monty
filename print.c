@@ -15,7 +15,7 @@ void print_all(stack_t **stack, unsigned int line_number)
 {
 stack_t *h;
 (void)line_number;
-if (!stack || !*stack)
+if (stack == NULL || *stack == NULL)
 return;
 h = *stack;
 while (h->next != NULL)
@@ -38,7 +38,7 @@ printf("%d\n", h->n);
  */
 void print_stack(stack_t **stack, unsigned int line_number)
 {
-if (!stack || !*stack)
+if (stack == NULL || *stack == NULL)
 {
 fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
 free_stk(stack);

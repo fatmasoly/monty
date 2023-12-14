@@ -109,7 +109,7 @@ void free_stk(stack_t **head)
 {
 fclose(glob_nod.fd);
 free(glob_nod.buff);
-if (head == NULL || *head == NULL)
+if (!head || !*head)
 return;
 while ((*head)->next)
 {

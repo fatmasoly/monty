@@ -16,7 +16,7 @@
  */
 void pop_stack(stack_t **stack, unsigned int line_number)
 {
-if (!stack || !*stack)
+if (stack == NULL || *stack == NULL)
 {
 fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
 free_stk(stack);
@@ -65,7 +65,7 @@ void nop_stack(stack_t **stack, unsigned int line_number)
 void swap_stack(stack_t **stack, unsigned int line_number)
 {
 int swa;
-if (!stack || !*stack || !(*stack)->next)
+if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 {
 fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
 free_stk(stack);
@@ -90,7 +90,7 @@ swa = (*stack)->next->n;
  */
 void add_elements(stack_t **stack, unsigned int line_number)
 {
-if (!stack || !*stack || !(*stack)->next)
+if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 {
 fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
 free_stk(stack);

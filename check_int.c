@@ -37,7 +37,7 @@ return (0);
 void check_integer(stack_t **head, char *s, unsigned int line)
 {
 unsigned long idx = 0;
-if (s == NULL || *s == '\0')
+if (!s || *s == '\0')
 {
 fprintf(stderr, "L%u: usage: push integer\n", line);
 free_stk(head);
